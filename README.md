@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 🏥 Patient Manager (React + TypeScript + Zustand)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un **Administrador de Pacientes** simple, moderno y eficiente. Esta aplicación web permite a los usuarios gestionar, añadir, editar y eliminar registros de pacientes de forma intuitiva.
 
-Currently, two official plugins are available:
+Construido sobre el stack de **React** y **TypeScript**, utiliza **Zustand** para la gestión de estado y **Tailwind CSS** para un diseño rápido y atractivo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Características Principales
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Gestión Completa de Pacientes**: Añade nuevos pacientes con datos como nombre, propietario, email, fecha de alta y síntomas.
+* **Edición y Eliminación**: Permite modificar cualquier registro existente o eliminarlo permanentemente con una interfaz sencilla.
+* **Estado Global Eficiente**: Utiliza **Zustand** para una gestión de estado ligera y predecible, manteniendo la aplicación rápida y reactiva.
+* **Notificaciones Amigables**: Implementación de **Toastify** para proporcionar *feedback* visual (mensajes de éxito o error) al usuario después de cada acción (guardar, editar, eliminar).
+* **Persistencia de Datos**: Los datos se mantienen en el almacenamiento local del navegador, permitiendo que la información de los pacientes persista incluso después de recargar la página.
+* **Diseño Moderno y Responsivo**: Estilizado completamente con **Tailwind CSS** para una interfaz limpia y adaptada a cualquier dispositivo.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 💻 Tecnologías Utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Este proyecto fue desarrollado con las siguientes herramientas y librerías:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+| Tecnología | Descripción |
+| :--- | :--- |
+| **React** | Biblioteca principal para la interfaz de usuario. |
+| **TypeScript** | Añade tipado estático para un código más robusto y escalable. |
+| **Vite** | Entorno de *build* rápido para el desarrollo y *bundling*. |
+| **Zustand** | Librería de gestión de estado ligera y mínima. |
+| **Tailwind CSS** | Framework de CSS *utility-first* para un estilizado rápido. |
+| **React-Toastify** | Librería para notificaciones *toast* personalizadas. |
+| **UUID** | Generación de identificadores únicos universales para cada paciente. |
+
+---
+
+## 🚀 Guía de Inicio Rápido
+
+Sigue estos pasos para tener una copia del proyecto funcionando en tu máquina local.
+
+### Prerrequisitos
+
+Asegúrate de tener instalado **Node.js** y **npm** (o **Yarn** / **pnpm**).
+
+### Instalación
+
+1.  Clona el repositorio:
+    ```bash
+    git clone [URL-DEL-REPOSITORIO]
+    ```
+2.  Navega al directorio del proyecto:
+    ```bash
+    cd patient-manager
+    ```
+3.  Instala las dependencias:
+    ```bash
+    npm install
+    # o yarn install
+    ```
+
+### Ejecución
+
+Ejecuta el servidor de desarrollo:
+
+```bash
+npm run dev
+# o yarn dev
